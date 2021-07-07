@@ -1,0 +1,270 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#FC5E55, #FA4083);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+li{
+    list-style: none;
+}
+
+/*----------------------------------*/
+/*------------HEADER----------------*/
+/*----------------------------------*/
+ .container{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    min-height: 25px;
+    color: white;
+    font-size: 1.2rem;
+    background-color: cornflowerblue;
+}
+.container a{
+    display: block;
+  
+   text-decoration: none;
+   color: white;
+   padding: .5rem; 
+}
+.con{
+    /* padding-left: 5rem; */
+    background-color: blue;
+    
+    
+}
+form{
+    padding: 15px 20px 0 0 ;
+}
+button{
+    background-color: turquoise;
+    padding: 2px 4px; 
+    border: 2px solid turquoise;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(0, 197, 177);
+    border: 2px solid rgb(0, 197, 177);
+}
+    
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.logo{
+    width: 165.5px;
+    height: 41px;
+    padding-left: 10px;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white; 
+     padding: .5rem;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 20px;
+} 
+
+ .navbar-links li a:hover {
+    background-color: rgb(240, 9, 9);
+    border: 1px solid rgb(240, 9, 9);
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/*----------------------------------*/
+/*------------MAIN----------------*/
+/*----------------------------------*/
+.flexbox-1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.grp-book{
+   max-width: 100%;
+   height: auto;
+}
+
+
+.flexbox-1 a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    border: 1px solid white;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    
+}
+
+.flexbox-1 p{
+    color: white;
+   
+}
+
+
+.flexbox-1 a:hover{
+    background-color: rgb(248, 37, 0);
+    border: 1px solid rgb(248, 37, 0);
+}
+.owner{
+    text-align: center;
+    padding: 5rem;
+}
+.ownerpic{
+    max-width: 100%;
+   height: auto;
+}
+
+/*------------GRID----------------*/
+.grid{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-rows: 1fr;
+}
+.book{
+    width: 280px;
+    height: auto;
+    
+}
+
+.grid-itm{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------*/
+/*------------RESPONSIVE----------------*/
+/*----------------------------------*/
+
+/*------------screen 765----------------*/
+
+
+/*------------screen 850----------------*/
+@media (max-width: 850px) {
+    .container form label, input{
+        display: none;
+    } 
+
+   .container{
+       align-items: flex-start;
+   }
+   
+   .con{
+       padding: 0;
+       margin: 0;
+   }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: rgb(69, 69, 202);
+       
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: 10px;
+        margin: 5px;
+        border: none;
+    }
+
+    .navbar-links li a:hover{
+        background-color: rgb(47, 47, 221);
+        border: 1px solid rgb(47, 47, 221);
+
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+} 
+
+/*------------flexbox-1----------------*/
+/*------------screen 1135----------------*/
+@media (max-width: 1145px){
+    .flexbox-1{
+        justify-content: center;
+    }
+
+}
+
+
+/* @media (max-width: 539px){
+    .grid .grid-itm{
+      text-align: center;
+}
+} */
