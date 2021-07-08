@@ -9,8 +9,8 @@ body {
     background: linear-gradient(#FC5E55, #FA4083);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
-}
+     height: 100%;
+} 
 li{
     list-style: none;
 }
@@ -26,20 +26,18 @@ li{
     min-height: 25px;
     color: white;
     font-size: 1.2rem;
-    background-color: cornflowerblue;
 }
 .container a{
     display: block;
-  
-   text-decoration: none;
-   color: white;
-   padding: .5rem; 
+    text-decoration: none;
+    color: white;
+    padding: .5rem; 
 }
-.con{
-    /* padding-left: 5rem; */
+.con span{
     background-color: blue;
-    
-    
+}
+.con i{
+    font-size: 2rem;
 }
 form{
     padding: 15px 20px 0 0 ;
@@ -92,6 +90,7 @@ button:hover{
     border: 1px solid white;
     border-radius: 5px;
     margin: 20px;
+    transition: background-color .3s;
 } 
 
  .navbar-links li a:hover {
@@ -140,6 +139,7 @@ button:hover{
     border-radius: 5px;
     display: block;
     text-align: center;
+    transition: background-color .3s;
     
 }
 
@@ -158,36 +158,83 @@ button:hover{
     padding: 5rem;
 }
 .ownerpic{
-    max-width: 100%;
+    max-width: 200px;
    height: auto;
 }
 
 /*------------GRID----------------*/
 .grid{
+    position: relative;
+    top: 1rem;
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     grid-template-rows: 1fr;
+   
 }
 .book{
+    position: relative;
     width: 280px;
     height: auto;
+    top: 1rem;
+    
     
 }
 
 .grid-itm{
     text-align: center;
+    /* min-width: 220px; */
+    min-height: 240px;
+    background-color: cadetblue;
+}
+.grid-itm a{
+    text-decoration: none;
+    color: white;
+    transition: color .25s;
+    
+}
+.grid-itm a:hover{
+    color: green;
 }
 
+.grid-itm p{
+    color: white;
+    font-size: 1.3rem;
+    min-width: 70px;
+    display: flex;
+    padding: 0 5px;
+    justify-content: space-around;
+    border: 3px solid white;
+}
 
+/*----------------------------------*/
+/*------------SECTION----------------*/
+/*----------------------------------*/
+section{
+    position: relative;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    background-color: rgb(245, 220, 220);
+    min-height: 200px;
+   
+}
+  
+.grid-2{
+    position: relative;
+    left: 1rem;
+    
+   
+}
 
+.chek{
+    color: green;
+    text-decoration: none;
+}
 
-
-
-
-
-
-
+.chek:hover{
+    border-bottom: 1px solid green;
+}
 
 /*----------------------------------*/
 /*------------RESPONSIVE----------------*/
@@ -201,15 +248,15 @@ button:hover{
     .container form label, input{
         display: none;
     } 
+    .container form button{
+        position: relative;
+        top: .5rem;
+        background-color: cornsilk;
+        padding: 5px 5px;
+        border: 1px solid cornsilk;
+       
+    }
 
-   .container{
-       align-items: flex-start;
-   }
-   
-   .con{
-       padding: 0;
-       margin: 0;
-   }
     .navbar {
         flex-direction: column;
         align-items: flex-start;
@@ -263,8 +310,11 @@ button:hover{
 }
 
 
-/* @media (max-width: 539px){
-    .grid .grid-itm{
-      text-align: center;
+/*-----------Section--------*/
+
+@media (max-width: 400px){
+    .grid-2{
+        position: static; 
+    }
+   
 }
-} */
